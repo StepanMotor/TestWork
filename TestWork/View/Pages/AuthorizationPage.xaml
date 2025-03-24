@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:TestWork.View.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="500" d:DesignWidth="1200"
       Title="AuthorizationPage">
 
     <Grid Background="White">
@@ -30,15 +30,19 @@
                    FontSize="20"
                    Grid.Row="1"
                    Grid.Column="1"/>
-        <TextBox Grid.Row="3"
+        <PasswordBox Grid.Row="3"
                  Grid.Column="1"
                  Width="250"
-                 Height="40"/>
+                 Height="40"
+                 VerticalContentAlignment="Center"
+                 Name="LoginTb"/>
         <Button Grid.Column="1"
                 Grid.Row="5"
                 Content="Ok"
                 Height="40"
-                Width="100"/>
+                Width="100"
+                Name="OKBtn"
+                Click="OKBtn_Click"/>
 
     </Grid>
 </Page>

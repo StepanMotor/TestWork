@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TestWork.AppDate;
 
 namespace TestWork.View.Pages
 {
@@ -27,12 +28,12 @@ namespace TestWork.View.Pages
 
         private void StudentBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            FrameHelper.mainFrame.Navigate(new View.Pages.ChoisePage());
         }
 
         private void TeacherBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            FrameHelper.mainFrame.Navigate(new View.Pages.AuthorizationPage());
         }
     }
 }

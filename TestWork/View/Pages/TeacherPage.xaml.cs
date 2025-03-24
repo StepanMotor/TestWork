@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TestWork.AppDate;
 
 namespace TestWork.View.Pages
 {
@@ -23,6 +24,31 @@ namespace TestWork.View.Pages
         public TeacherPage()
         {
             InitializeComponent();
+        }
+
+        private void AddStudentBtn_Click(object sender, RoutedEventArgs e)
+        {
+            FrameHelper.mainFrame.Navigate(new View.Pages.AddStudentPage());
+        }
+
+        private void AddGroupBtn_Click(object sender, RoutedEventArgs e)
+        {
+            FrameHelper.mainFrame.Navigate(new View.Pages.AddGroupPage());
+        }
+
+        private void ListStudentWithMarkBtn_Click(object sender, RoutedEventArgs e)
+        {
+            FrameHelper.mainFrame.Navigate(new View.Pages.ListStudentPage());
+        }
+
+        private void DeleteStudent_Click(object sender, RoutedEventArgs e)
+        {
+            FrameHelper.mainFrame.Navigate(new View.Pages.DeleteStudentPage());
+        }
+
+        private void BackToStartBtn_Click(object sender, RoutedEventArgs e)
+        {
+            FrameHelper.mainFrame.Navigate(new View.Pages.StartPage());
         }
     }
 }

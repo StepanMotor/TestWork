@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TestWork.AppDate;
 
 namespace TestWork.View.Pages
 {
@@ -23,6 +24,27 @@ namespace TestWork.View.Pages
         public AuthorizationPage()
         {
             InitializeComponent();
+        }
+
+        private void OKBtn_Click(object sender, RoutedEventArgs e)
+        {
+            if (string.IsNullOrEmpty(LoginTb.Password))
+            {
+                MessageBox.Show("Введите пароль");
+
+            }
+            else
+            {
+                if (LoginTb.Password == "123")
+                {
+                    MessageBox.Show("Данные верны");
+                    FrameHelper.mainFrame.Navigate(new View.Pages.TeacherPage());
+                }
+                else
+                {
+                    MessageBox.Show("Данные неверны");
+                }
+            }
         }
     }
 }

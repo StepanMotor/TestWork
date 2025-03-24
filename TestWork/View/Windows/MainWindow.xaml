@@ -5,21 +5,27 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TestWork"
         mc:Ignorable="d"
-        Title="MainWindow" Height="550" Width="850">
+        Title="MainWindow" Height="620" Width="1250" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="1*" />
-            <RowDefinition Height="3*" />
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
+
         <Grid>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="auto" />
-                <ColumnDefinition Width="4*" />
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="1*"/>
             </Grid.ColumnDefinitions>
-
             <Image Source="/Recources/Шеврон.jpg" />
-            <TextBlock Text="ТПСК им В.М. Максимчука" Grid.Column="1" Foreground="Black" FontSize="55" Background="#FF07776A"/>
 
+            <TextBlock Text="ТПСК им В.М. Максимчука" FontWeight="SemiBold" Grid.Column="1" Foreground="Black" FontSize="55" TextAlignment="Center" Background="#FF07776A"/>
         </Grid>
+
+        <Grid Grid.Row="1">
+            <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden"/>
+        </Grid>
+
+    
     </Grid>
 </Window>
