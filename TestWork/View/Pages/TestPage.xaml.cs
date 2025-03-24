@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TestWork.AppDate;
 
 namespace TestWork.View.Pages
 {
@@ -347,7 +348,7 @@ namespace TestWork.View.Pages
             //App.context.Journal.Add(journal);
             //App.context.SaveChanges();
 
-            //ClassFrame.mainFrame.Navigate(new MainMenuPage());
+            FrameHelper.mainFrame.Navigate(new View.Pages.ChoisePage());
         }
         private void CalculatGrade()
         {
